@@ -38,4 +38,5 @@ AOS (Animate on Scroll) Library
 Google Fonts (Outfit)
 
 <img width="1918" height="1027" alt="Image" src="https://github.com/user-attachments/assets/5be2008b-c7a9-4770-96d3-5ccdd61b5edf" />
+
 https://github.com/user-attachments/assets/8ca0ca25-3110-4d42-8e86-7e091199c431
