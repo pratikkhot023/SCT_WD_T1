@@ -1,0 +1,267 @@
+/* -----------------------------
+   GLASS GLOW PORTFOLIO STYLE
+   (STATIC ROW + WRAP VERSION)
+------------------------------ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: linear-gradient(120deg, #1a1a2e, #16213e, #0f3460);
+  background-size: 200% 200%;
+  animation: gradientMove 10s ease infinite;
+  color: #fff;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 200px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border-right: 1px solid rgba(255,255,255,0.1);
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #00FFFF;
+  letter-spacing: 2px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin: 20px 0;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.sidebar a:hover, .sidebar a.active {
+  color: #00FFFF;
+  text-shadow: 0 0 10px #00FFFF;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 220px;
+  padding: 60px 40px;
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 60px 0;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.section p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+.text {
+  flex: 1;
+}
+
+.image {
+  flex: 1;
+  text-align: center;
+}
+
+.image img {
+  max-width: 80%;
+  filter: drop-shadow(0 0 10px #00FFFF);
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  border-radius: 30px;
+  background: #00FFFF;
+  color: #0f3460;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background: transparent;
+  color: #00FFFF;
+  border: 2px solid #00FFFF;
+}
+.profile-photo {
+  width: 250px;           /* adjust size */
+  height: 250px;          /* keep square for circle */
+  object-fit: cover;      /* crop image nicely */
+  border-radius: 50%;     /* make it circular */
+  border: 3px solid #00FFFF; /* glass-glow border */
+  box-shadow: 0 0 15px #00FFFF;
+  transition: transform 0.3s;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05); /* subtle hover effect */
+}
+/* Projects Section */
+.projects {
+  flex-direction: column;
+  text-align: center;
+}
+
+.project-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* slightly smaller gap */
+  padding: 30px 0; /* less vertical padding */
+}
+
+.project-card {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 20px; /* slightly smaller padding */
+  text-align: left;
+  width: 280px; /* slightly narrower */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: all 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px #00FFFF;
+}
+
+.project-card h3 {
+  color: #00FFFF;
+  margin-bottom: 8px; /* tighter spacing */
+}
+
+.project-card p {
+  line-height: 1.4; /* tighter line spacing */
+  margin-bottom: 8px; /* less space between sentences */
+  opacity: 0.9;
+}
+.project-photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #00FFFF;
+  box-shadow: 0 0 10px #00FFFF;
+  margin-bottom: 12px;
+  transition: transform 0.3s;
+}
+
+.project-photo:hover {
+  transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact {
+  flex-direction: column;
+  text-align: center;
+}
+
+.contact p {
+  line-height: 1.4; /* tighter line spacing */
+  margin-bottom: 10px; /* less space between sentences */
+}
+
+.email a {
+  color: #00FFFF;
+  text-decoration: none;
+}
+
+.social-links {
+  margin-top: 15px; /* slightly less margin */
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 0 8px; /* closer together */
+  color: #fff;
+  border: 1px solid #00FFFF;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: all 0.3s;
+}
+
+.social-links a:hover {
+  background: #00FFFF;
+  color: #0f3460;
+}
+
+/* Center About Section */
+.about {
+  display: flex;
+  flex-direction: row;        /* keep image and text side by side */
+  align-items: center;        /* vertically center image and text */
+  justify-content: center;    /* center the entire section horizontally */
+  gap: 40px;                  /* space between text and image */
+}
+
+.about .text {
+  text-align: left;           /* keep text left-aligned */
+  flex: 1;                    /* allow text to take available space */
+}
+
+.about .image {
+  flex: 1;                    /* image takes remaining space */
+  text-align: right;          /* align image to the right */
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .section {
+    flex-direction: column;
+  }
+  .sidebar {
+    display: none;
+  }
+  .main-content {
+    margin-left: 0;
+    padding: 30px 20px;
+  }
+  .about {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
